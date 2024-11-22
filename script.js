@@ -41,6 +41,26 @@ function createGrid(number) {
                 gridbox.style.opacity = opacity;
             }
         });
+        // add colour change on click
+        let backgroundColor = "blue"
+        gridbox.addEventListener("click", () => {
+            if (backgroundColor == "blue") {
+                backgroundColor = "green";
+                gridbox.style.backgroundColor = backgroundColor;
+            }
+            else if (backgroundColor == "green") {
+                backgroundColor = "red";
+                gridbox.style.backgroundColor = backgroundColor;
+            }
+            else if (backgroundColor == "red") {
+                backgroundColor = "yellow";
+                gridbox.style.backgroundColor = backgroundColor;
+            }
+            else if (backgroundColor == "yellow") {
+                backgroundColor = "blue";
+                gridbox.style.backgroundColor = backgroundColor;
+            };
+        });
         // appends each gridbox to the container
         container.appendChild(gridbox);
     };
